@@ -9,8 +9,11 @@ I have designed the settings page for both desktop and mobile views using Tailwi
 
 ## Components
 Header.js: Component for the page header.
+
 Sidebar.js: Component for the sidebar navigation.
+
 Payment.js: Component for managing payment settings.
+
 Table.js: Component for displaying table data.
 
 Overall, I found this project to be a great opportunity to learn about building responsive dashboards using React and Tailwind CSS. 
