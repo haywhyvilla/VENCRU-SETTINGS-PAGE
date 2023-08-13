@@ -66,9 +66,9 @@ const Table = () => {
         }
     ]
     return (
-        <section>
-            <div class="flex justify-between items-center mb-6">
-                <h2 class="text-gray-900 text-lg font-medium">Billing history</h2>
+        <section class="overflow-x-scroll">
+            <div class="md:flex block justify-between items-center mb-6">
+                <h2 class="text-gray-900 text-lg font-medium md:mb-0 mb-4">Billing history</h2>
                 <button class="flex rounded-lg py-2 px-4 bg-white border-[1px] border-gray-300">
                     <Image src={download} alt="download" class="mr-2" />
                     <p class="text-gray-700 text-sm font-medium">Download all</p>
@@ -77,7 +77,7 @@ const Table = () => {
             <table class="border-[1px] border-gray-200 rounded-xl w-full bg-white">
                 <thead class="p-6 bg-gray-50 border-y-[1px] border-gray-200">
                     <tr>
-                        <th class="flex justify-start items-center text-gray-500 text-xs font-medium mt-3">
+                        <th class="flex justify-start items-center text-gray-500 text-xs font-medium md:mt-3 mt-1">
                             <input type="checkbox" class="ml-6" />
                             <p class="ml-3">Invoice</p>
                             <Image src={arrow} class="ml-3" />
@@ -85,7 +85,7 @@ const Table = () => {
                         <th class="text-gray-500 text-xs font-medium">Amount</th>
                         <th class="text-gray-500 text-xs font-medium">Date</th>
                         <th class="text-gray-500 text-xs font-medium">Status</th>
-                        <th class="text-gray-500 text-xs font-medium">Users on plan</th>
+                        <th class="text-gray-500 text-xs font-medium md:block hidden">Users on plan</th>
                         <th>
                             <Image src={cell} alt="tablecell" />
                         </th>
@@ -95,16 +95,16 @@ const Table = () => {
                     {
                         tableData.map((item) => (
                             <tr key={item.id} class="border-y-[1px] border-gray-200">
-                                <td class="py-4 px-6 text-gray-900 flex"><input type="checkbox" class="mr-3" /><p class="text-gray-900 font-medium text-sm">{item.Invoice}</p></td>
-                                <td class="py-4 px-6 text-gray-500 font-normal text-sm">{item.Amount}</td>
-                                <td class="py-4 px-6 text-gray-500 font-normal text-sm">{item.date}</td>
+                                <td class="py-4 md:px-6 px-1 text-gray-900 flex"><input type="checkbox" class="mr-3 md:block hidden" /><p class="text-gray-900 md:font-medium font-normal md:text-sm text-xs">{item.Invoice}</p></td>
+                                <td class="py-4 px-6 text-gray-500 md:font-medium font-normal md:text-sm text-xs">{item.Amount}</td>
+                                <td class="py-4 px-6 text-gray-500 md:font-medium font-normal md:text-sm text-xs">{item.date}</td>
                                 <td class="py-4 px-6 text-gray-900">
                                     <button class="py-[2px] px-2 bg-[#ECFDF3] rounded-2xl flex">
                                         <Image src={check} alt="check" />
                                         <span class="text-[#027A48] font-medium text-xs ml-1">Paid</span>
                                     </button>
                                 </td>
-                                <td class="flex py-4 px-6">{item.Images.map((image) => (
+                                <td class="md:flex py-4 px-6 block">{item.Images.map((image) => (
 
                                     <Image src={image} class="-ml-[10px]" />
 

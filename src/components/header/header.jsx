@@ -2,7 +2,7 @@
 
 const Header = () => {
     const menu = [
-        { name: "My details" },
+        { name: "Details" },
         { name: "Profile" },
         { name: "Password" },
         { name: "Team" },
@@ -17,7 +17,7 @@ const Header = () => {
             <h1 class="text-gray-900 text-3xl font-medium mb-2">Settings</h1>
             <p class="text-gray-500 text-base font-normal mb-6">Manage your team and preferences here.</p>
             <div>
-                <ul class="flex">
+                <ul class="flex md:overflow-x-hidden overflow-x-scroll">
                     {
                         menu.map((item, index) => (
                             <li key={index} class="bg-white hover:bg-gray-50">
