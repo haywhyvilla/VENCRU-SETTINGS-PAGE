@@ -104,13 +104,13 @@ const Table = () => {
                                         <span class="text-[#027A48] font-medium text-xs ml-1">Paid</span>
                                     </button>
                                 </td>
-                                <td class="md:flex py-4 px-6 block">{item.Images.map((image) => (
+                                <td class="lg:flex py-4 px-6 hidden">{item.Images.map((image) => (
 
                                     <Image src={image} class="-ml-[10px]" />
 
                                 ))}</td>
                                 <td>
-                                    <Image src={download} alt="download" />
+                                    <Image src={download} alt="download" class="cursor-pointer" />
                                 </td>
 
                             </tr>
