@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import download from "../../assets/download.svg"
 import one from "../../assets/one.svg"
